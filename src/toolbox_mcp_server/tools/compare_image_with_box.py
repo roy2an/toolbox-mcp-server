@@ -47,4 +47,4 @@ def compare_image_with_box(srcA, srcB):
     #返回imageB的base64编码
     _, buffer = cv2.imencode('.jpg', imageB)
     image_base64 = str(base64.b64encode(buffer), encoding='utf-8')
-    return [types.ImageContent(type="image", mimeType="image/png", data=image_base64)]
+    return [types.ImageContent(type="image", mimeType="image/png", data=image_base64), types.TextContent(type="text", text="SSIM: {}".format(score))]
