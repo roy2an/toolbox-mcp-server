@@ -28,8 +28,14 @@ async def handle_list_tools() -> list[types.Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "image1": {"type": "string"},
-                    "image2": {"type": "string"},
+                    "image1": {
+                        "type": "string",
+                        "description": "Path to the first image"
+                    },
+                    "image2": {
+                        "type": "string",
+                        "description": "Path to the second image"
+                    },
                 },
                 "required": ["image1", "image2"],
             },
@@ -40,8 +46,14 @@ async def handle_list_tools() -> list[types.Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "image1": {"type": "string"},
-                    "image2": {"type": "string"},
+                    "image1": {
+                        "type": "string",
+                        "description": "Path to the first image"
+                    },
+                    "image2": {
+                        "type": "string",
+                        "description": "Path to the second image"
+                    },
                 },
                 "required": ["image1", "image2"],
             },
